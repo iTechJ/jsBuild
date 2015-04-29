@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <script type="application/javascript" src="js/utils.js"></script>
+    <script type="application/javascript" src="js/rpComponent.js"></script>
+    <script type="application/javascript" src="js/error.js"></script>
+    <script type="application/javascript" src="js/success.js"></script>
+    <script type="application/javascript" src="js/modal.js"></script>
+    <title>Getting everything together</title>
+</head>
+
+<body>
+    <div class="component modal"></div>
+    <div class="component success"></div>
+    <div class="component error"></div>
+
+
+    <!--<div class="rp-modal">-->
+        <!--<h2>Modal Window</h2>-->
+        <!--<p>Lorem ipsum...</p>-->
+    <!--</div>-->
+
+    <input type="button" value="error" id="error">
+    <input type="button" value="success" id="success">
+    <input type="button" value="modal" id="modal">
+    <script>
+        var error = new itechart.error(".component.error"),
+            success = new itechart.success(".component.success"),
+            modal = new itechart.modal(".component.modal", "header", "do you really confirm the action?", function(){
+                alert("confirmed!");
+                modal.hide(true);
+            });
+
+        document.getElementById("error").onclick = function(){
+            error.flash("error", "important message, describing the essence of the issue");
+        };
+
+        document.getElementById("success").onclick = function(){
+            success.flash("success", "cheerful message, congratulating you with success");
+        };
+
+        document.getElementById("modal").onclick = function(){
+            modal.show();
+        };
+    </script>
+</body>
+</html>

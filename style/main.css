@@ -1,0 +1,108 @@
+body {
+    background: rgba(217,217,217,1.0);
+}
+
+.rp-component.rp-error,
+.rp-component.rp-success {
+    right: 10px;
+    top: 10px;
+    color: white;
+    width: 400px;
+    float: right;
+}
+
+.rp-component.rp-error {
+    border: 1px solid red;
+    background-color: rgba(255,0,0,0.7);
+}
+
+.rp-component.rp-success {
+    border: 1px solid green;
+    background-color: rgba(0,255,0,0.7);
+}
+
+.rp-component.rp-error .rp-close,
+.rp-component.rp-success .rp-close,
+.rp-component.rp-error h2,
+.rp-component.rp-success h2,
+.rp-component.rp-error .rp-content,
+.rp-component.rp-success .rp-content {
+    color: white;
+}
+
+.rp-component.rp-modal {
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 20px;
+    width: 500px;
+    height: 200px;
+}
+
+.rp-component.rp-modal .rp-content {
+    height: 110px;
+}
+.rp-button {
+    float: right;
+    margin: 0.1em;
+    width: 70px;
+    height: 30px;
+}
+.rp-component h2 {
+    color: #232323;
+    text-transform: uppercase;
+    font: 1.6em Helvetica, Verdana, sans-serif;
+    margin: 0;
+}
+
+.rp-component p {
+    color: #444;
+    text-align: left;
+    font: 13px/1.8 Georgia, Times, sans-serif;
+}
+
+.rp-component .rp-close {
+    font-family: Verdana, Geneva, sans-serif;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+    color: grey;
+}
+
+.rp-component .rp-close:hover {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.7)";
+    filter: alpha(opacity=0.7);
+}
+
+.rp-component {
+    padding: 0.6em;
+    margin: 1em;
+    position: fixed;
+    background: rgba(255,255,255,0.7);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    z-index: -100;
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+    border: 1px solid gainsboro;
+}
+
+.rp-component.rp-visible {
+    opacity: 1!important;
+    z-index: 1!important;
+}
+
+.rp-hidden {
+    display: none!important;
+    visibility: hidden!important;
+}
