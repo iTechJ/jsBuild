@@ -8,8 +8,5 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('default'));
 });
 
-
-
-
-//Step 1: install gulp
-//Step 2: add jshint
+//Step 0: install gulp
+//Step 1: add jshint
