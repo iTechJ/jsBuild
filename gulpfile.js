@@ -20,6 +20,6 @@ gulp.task('script', function() {
 
 });
 
-//Step 1: install gulp
-//Step 2: add jshint
-//Step 3: concatenate js
+//Step 0: install gulp
+//Step 1: add jshint
+//Step 2: concatenate js
