@@ -2,6 +2,8 @@
 var gulp   = require('gulp'); //npm install gulp --save-dev
 var jshint = require('gulp-jshint'); //npm install gulp-jshint --save-dev
 var concat = require('gulp-concat'); //npm install gulp-concat --save-dev
+var uglify = require('gulp-uglify'); //npm install gulp-uglify --save-dev
+var rename = require('gulp-rename'); //npm install gulp-rename --save-dev
 
 gulp.task('script', function() {
     return gulp.src([
@@ -16,10 +18,16 @@ gulp.task('script', function() {
     .pipe(jshint.reporter('default'))
     /*adding concatenation*/
     .pipe(concat('result.js'))
+    .pipe(gulp.dest('dist/'))
+    /*adding uglifying*/
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/'));
 
 });
 
-//Step 1: install gulp
-//Step 2: add jshint
-//Step 3: concatenate js
+//npm install gulp-autoprefixer gulp-minify-css gulp-notify  gulp-livereload gulp-cache del
+//Step 0: install gulp
+//Step 1: add jshint
+//Step 2: concatenate js
+//Step 3: minify & uglify js
