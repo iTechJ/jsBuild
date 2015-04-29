@@ -26,7 +26,7 @@ gulp.task('script', function() {
 
 });
 
-//npm install gulp-autoprefixer gulp-minify-css gulp-notify  gulp-livereload gulp-cache del
+
 //Step 0: install gulp
 //Step 1: add jshint
 //Step 2: concatenate js
